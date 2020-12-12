@@ -1,12 +1,11 @@
 import * as dotenv from "dotenv";
-dotenv.config();
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
+dotenv.config();
 
-import postRoutes from "./routes/post.js";
-
+import postRoutes from "./routes/posts.js";
 const app = express();
 
 app.use("/posts", postRoutes); //every route inside of the postRoutes is gonna start with /posts
